@@ -1,0 +1,39 @@
+SEQ  KITTI_RAW  TRAIN/VAL/TEST
+00 2011_10_03_drive_0027 TEST       4541 (000000 - 004540)
+01 2011_10_03_drive_0042 TRAIN/VAL  1101 (000000 - 001100)
+02 2011_10_03_drive_0034 TRAIN/VAL  4661 (000000 - 004660)
+03 2011_09_26_drive_0067 NONE       801  (000000 - 000800)
+04 2011_09_30_drive_0016 TEST       271  (000000 - 000270)
+05 2011_09_30_drive_0018 TEST       2761 (000000 - 002760)
+06 2011_09_30_drive_0020 TRAIN/VAL  1101 (000000 - 001100)
+07 2011_09_30_drive_0027 TEST       1101 (000000 - 001100)
+08 2011_09_30_drive_0028 TRAIN/VAL  4071 (001100 - 005170)
+09 2011_09_30_drive_0033 TRAIN/VAL  1591 (000000 - 001590)
+10 2011_09_30_drive_0034 TRAIN/VAL  1201 (000000 - 001200)
+
+* If we use the overlap of EIGEN_SPLIT and all images in odom (exclude the first and last image)
+TRAIN/VAL:
+01, 02, 06, 08, 09, 10
+=> images: 13714
+    => eigen train: 22537 + 888
+
+TEST:
+00, 04, 05, 07
+=> 8666
+
+NONE:
+03
+
+* If we use the split of DF-VO and use the same train/val ratio
+TRAIN/VAL:
+00, 01, 02, 03, 04, 05, 06, 07, 08
+=> images: 20391
+    => train: 19618
+    => val: 773
+
+TEST:
+09, 10
+
+
+
+
